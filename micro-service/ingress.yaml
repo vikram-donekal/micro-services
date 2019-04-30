@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: spring-boot-microservice-ingress
+spec:
+  hostNetwork: true
+  rules:
+  - http:
+      paths:
+      - path: /student
+        backend:
+          serviceName: micro-service-1
+          servicePort: 9090
+      - path: /city
+        backend:
+          serviceName: micro-service-2
+          servicePort: 9091
