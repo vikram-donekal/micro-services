@@ -87,10 +87,10 @@ Minikube - Simple K8s Testing Purpose orchestrator
 	
 	Test:
 
-	test -1 : 	curl http://<machine-ip>:80/student/api/student/find/all
+	test -1 : 	curl http://<machine-ip>:9090/student/api/student/find/all
 				Reponse : we will get a list of students (Reponse may take time as it may contains randam number of records)
 		
-	test -2 : curl http://<machine-ip>:80/student/api/student/find/{id}
+	test -2 : curl http://<machine-ip>:9090/student/api/student/find/{id}
 	           
 			   Reponse: It will return a record if Present (First Time it will hit DataBase)
 							(Next Time if we do same Curl Operation it will return from InMemory Cache)
